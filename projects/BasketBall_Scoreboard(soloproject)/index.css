@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
+    background: #1b244a;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +10,7 @@ body {
 }
 
 .container {
-    background: #1b244a;
+    /*background: #1b244a;*/
     display: flex;
     justify-content: center;
     margin: auto;
@@ -24,8 +25,8 @@ body {
     align-items: center;
     max-width: 80%;
     margin: 25px;
-    border: 2px solid green;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px  #101737;
 }
 
 .box_score{
@@ -38,6 +39,12 @@ body {
     align-items: center;
     max-width: 80%;
     margin: auto;
+}
+
+.box_reset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn_score{
