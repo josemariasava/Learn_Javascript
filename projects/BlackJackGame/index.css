@@ -1,0 +1,40 @@
+/* Complete the CSS styling according to the provided design */
+
+body {
+    /* font stack , if one of the fonts is not present the browser will use on of them */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Helvetica, sans-serif;
+    background-image: url("images/table.png");
+    background-size: cover;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+/*ID selector*/
+#message-el {
+    font-style: italic;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center buttons horizontally */
+    gap: 10px; /* spacing between buttons */
+    margin-top: 10px; /* spacing from above content */
+}
+
+button{
+    background-color: goldenrod;
+    color: #016f32;
+    width: 150px;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
