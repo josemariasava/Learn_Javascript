@@ -1,9 +1,8 @@
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
 let cards = [] // Array definition
 let hasBlackJack = false
 let isAlive = true
 let message = ""
+let sum = 0
 
 let messageEl = document.getElementById("message-el")
 /* With getElementById()*/
@@ -13,10 +12,29 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.querySelector("#card-el")
 
-cards = [firstCard,secondCard] // array of cards 
-let sum = cards[0] + cards[1]
+/* 2 variables strictly connected could be managed by objects */
+let player = { 
+    name : "Pippo",
+    chips : 145 
+}
+
+/* Dot notation to acces object properties */
+let playerEl = document.querySelector("#player-el")
+playerEl.textContent += player.name + ": $" + player.chips
+/* Bracket notation 
+playerEl.textContent += player["name"] + ": $" + player["chips"]
+*/
+
 
 function startGame() {
+    let isAlive = true 
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+
+    cards = [firstCard, secondCard]
+    
+    sum = firstCard + secondCard
+
     renderGame()
 }
 
@@ -46,15 +64,23 @@ function renderGame() {
 
 function newCard() {
     
-    let card = getRandomCard()
-
-    sum += card
-
-    cards.push(card)
-
-    renderGame()
+    if (isAlive && !hasBlackJack) {
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+    }
 }
 
 function getRandomCard() {
 
+    let randomNumber = Math.floor(Math.random() * 13) + 1 
+    
+    if (randomNumber > 10) {
+        return 10
+    } else if (randomNumber === 1) {
+        return 11
+    } else {
+        return randomNumber
+    }
 }
