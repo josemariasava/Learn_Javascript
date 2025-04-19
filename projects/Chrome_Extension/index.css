@@ -1,0 +1,44 @@
+:root{
+    --greenColor: #5f9341;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 400px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--greenColor);
+    margin-bottom: 4px;
+}
+
+button {
+    border: none;
+    background-color: var(--greenColor);
+    color: var(--white);
+    padding: 10px 20px; /* 1 for y axes(top-bottom) 2 for x axes (left-right)*/
+    font-weight: bold;
+}
+
+ul{
+    list-style: none; /* Remove the bullets*/
+    margin-top: 20px;
+    padding-left: 0px;
+}
+
+li{
+    margin-top: 5px;
+}
+
+li a{ /* style only if the a tag is inside a list */
+    color: var(--greenColor);            /* Link color */
+    display: inline-block;     /* Makes padding/margin behave better */
+    padding: 5px 10px;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
