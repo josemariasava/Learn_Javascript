@@ -19,11 +19,17 @@ input {
 }
 
 button {
-    border: none;
+    border: 1px solid var(--greenColor);
     background-color: var(--greenColor);
     color: var(--white);
     padding: 10px 20px; /* 1 for y axes(top-bottom) 2 for x axes (left-right)*/
     font-weight: bold;
+    cursor: pointer;
+}
+
+#delete-btn{
+    background-color: var(--white);
+    color: var(--greenColor);
 }
 
 ul{
