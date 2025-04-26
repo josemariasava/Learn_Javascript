@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+:root{
+    --convert-bg-color: #9f1239;
+    --bg-color: #fff1f2; 
+    --box-color: #ffe4e7;
+    --accent-color: #ffe4e7;
+    --white: #ffffff;
+    --txt-color-primary: #881337;
+    --txt-color-secondary: #1f2937;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.converter {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+h1 {
+    background-color: var(--convert-bg-color);
+    padding: 20px 10px;
+    font-size: 24px;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.input-section {
+    background-color: var(--convert-bg-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="number"] {
+    background-color: var(--convert-bg-color);
+    color: var(--bg-color);
+    font-size: 32px;
+    font-weight: bold;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--bg-color);
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    color: var(--convert-bg-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.results-section {
+    background-color: var(--box-color);
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.result-card {
+    background-color: var(--bg-color);
+    padding: 20px;
+    margin: 15px 0;
+    border: 1px solid var(--accent-color);
+}
+
+.result-card h2 {
+    color: var(--txt-color-primary);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.result-card p {
+    color: var(--txt-color-secondary);
+    font-size: 16px;
+}
